@@ -17,9 +17,10 @@ KTouch helps you learn to touch typing by providing you with something
 to write. KTouch can also help you to remember what fingers to use.
 
 %files
-%doc COPYING COPYING.DOC ChangeLog AUTHORS
+%doc COPYING COPYING.DOC AUTHORS
 %{_kde_appsdir}/ktouch
 %{_kde_bindir}/ktouch
+%{_kde_libdir}/kde4/imports/org/kde/ktouch
 %{_kde_iconsdir}/*/*/apps/ktouch.*
 %{_kde_applicationsdir}/ktouch.desktop
 %{_kde_datadir}/config.kcfg/ktouch.kcfg
@@ -41,6 +42,7 @@ to write. KTouch can also help you to remember what fingers to use.
 %changelog
 * Thu Feb 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.0-1
 - New version 4.10.0
+- Update files
 
 * Wed Dec 05 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.9.4-1
 - New version 4.9.4
