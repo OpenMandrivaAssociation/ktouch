@@ -1,6 +1,6 @@
 Name:		ktouch
 Summary:	A program for learning touch typing
-Version:	4.10.2
+Version:	4.10.3
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2 GFDL
@@ -40,6 +40,9 @@ to write. KTouch can also help you to remember what fingers to use.
 %makeinstall_std -C build
 
 %changelog
+* Tue May 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.3-1
+- New version 4.10.3
+
 * Wed Apr 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.2-1
 - New version 4.10.2
 
