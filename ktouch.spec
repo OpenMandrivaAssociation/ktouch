@@ -1,12 +1,13 @@
-Name:		ktouch
 Summary:	A program for learning touch typing
-Version:	4.12.4
+Name:		ktouch
+Version:	4.13.2
 Release:	1
+License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
-License:	GPLv2 GFDL
-URL:		http://edu.kde.org/ktouch
-Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+Url:		http://edu.kde.org/ktouch
+Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel
+BuildRequires:	pkgconfig(xkbfile)
 
 %description
 KTouch is a program for learning touch typing. KTouch is a way to learn
@@ -20,7 +21,6 @@ to write. KTouch can also help you to remember what fingers to use.
 %doc COPYING COPYING.DOC AUTHORS
 %{_kde_appsdir}/ktouch
 %{_kde_bindir}/ktouch
-%{_kde_libdir}/kde4/imports/org/kde/ktouch
 %{_kde_iconsdir}/*/*/apps/ktouch.*
 %{_kde_applicationsdir}/ktouch.desktop
 %{_kde_datadir}/config.kcfg/ktouch.kcfg
@@ -40,6 +40,11 @@ to write. KTouch can also help you to remember what fingers to use.
 %makeinstall_std -C build
 
 %changelog
+* Wed Jun 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.2-1
+- New version 4.13.2
+- Add pkgconfig(xkbfile) to BuildRequires
+- Update files (some stuff is no longer needed because of kqtquickcharts)
+
 * Wed Apr 02 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.12.4-1
 - New version 4.12.4
 
