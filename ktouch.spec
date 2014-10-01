@@ -19,12 +19,13 @@ to write. KTouch can also help you to remember what fingers to use.
 
 %files
 %doc COPYING COPYING.DOC AUTHORS
+%doc %{_kde_docdir}/HTML/*/ktouch
+%{_kde_applicationsdir}/ktouch.desktop
 %{_kde_appsdir}/ktouch
 %{_kde_bindir}/ktouch
-%{_kde_iconsdir}/*/*/apps/ktouch.*
-%{_kde_applicationsdir}/ktouch.desktop
+%{_kde_datadir}/appdata/ktouch.appdata.xml
 %{_kde_datadir}/config.kcfg/ktouch.kcfg
-%{_kde_docdir}/HTML/*/ktouch
+%{_kde_iconsdir}/*/*/apps/ktouch.*
 %{_kde_mandir}/man1/ktouch.1.*
 
 #----------------------------------------------------------------------
@@ -42,6 +43,7 @@ to write. KTouch can also help you to remember what fingers to use.
 %changelog
 * Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-1
 - New version 4.14.1
+- Update files
 
 * Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.3-1
 - New version 4.13.3
