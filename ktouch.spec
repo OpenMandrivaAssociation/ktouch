@@ -1,13 +1,14 @@
 Summary:	A program for learning touch typing
 Name:		ktouch
 Version:	4.13.3
-Release:	1
+Release:	1.1
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/ktouch
 Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel
 BuildRequires:	pkgconfig(xkbfile)
+Requires:	kqtquickcharts
 
 %description
 KTouch is a program for learning touch typing. KTouch is a way to learn
