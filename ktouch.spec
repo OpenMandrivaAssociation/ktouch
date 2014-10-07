@@ -1,13 +1,14 @@
 Summary:	A program for learning touch typing
 Name:		ktouch
 Version:	4.14.1
-Release:	1
+Release:	2
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/ktouch
 Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel
 BuildRequires:	pkgconfig(xkbfile)
+Requires:	kqtquickcharts
 
 %description
 KTouch is a program for learning touch typing. KTouch is a way to learn
@@ -41,6 +42,9 @@ to write. KTouch can also help you to remember what fingers to use.
 %makeinstall_std -C build
 
 %changelog
+* Tue Oct 07 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-2
+- Requires kqtquickcharts (omv #954)
+
 * Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-1
 - New version 4.14.1
 - Update files
