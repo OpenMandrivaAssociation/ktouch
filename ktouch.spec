@@ -23,7 +23,7 @@ to write. KTouch can also help you to remember what fingers to use.
 %{_datadir}/applications/kde4/org.kde.ktouch.desktop
 %{_datadir}/apps/ktouch
 %{_bindir}/ktouch
-%{_datadir}/metainfo/ktouch.appdata.xml
+%{_datadir}/metainfo/*.xml
 %{_datadir}/config.kcfg/ktouch.kcfg
 %{_iconsdir}/*/*/apps/ktouch.*
 %{_mandir}/man1/ktouch.1.*
