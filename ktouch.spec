@@ -19,12 +19,11 @@ KTouch helps you learn to touch typing by providing you with something
 to write. KTouch can also help you to remember what fingers to use.
 
 %files
-%doc COPYING COPYING.DOC AUTHORS
 %doc %{_docdir}/HTML/*/ktouch
-%{_datadir}/applications/kde4/ktouch.desktop
+%{_datadir}/applications/kde4/org.kde.ktouch.desktop
 %{_datadir}/apps/ktouch
 %{_bindir}/ktouch
-%{_datadir}/appdata/ktouch.appdata.xml
+%{_datadir}/metainfo/ktouch.appdata.xml
 %{_datadir}/config.kcfg/ktouch.kcfg
 %{_iconsdir}/*/*/apps/ktouch.*
 %{_mandir}/man1/ktouch.1.*
@@ -41,4 +40,3 @@ to write. KTouch can also help you to remember what fingers to use.
 
 %install
 %makeinstall_std -C build
-
