@@ -1,14 +1,41 @@
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	A program for learning touch typing
 Name:		ktouch
-Version:	16.12.2
+Version:	17.04.0
 Release:	1
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/ktouch
-Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
-BuildRequires:	kdelibs-devel
+Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(xkbfile)
-Requires:	kqtquickcharts
+BuildRequires:	pkgconfig(xcb-xkb)
+BuildRequires:	pkgconfig(x11)
+BuildRequires:	pkgconfig(xcb)
+BuildRequires:	cmake(Qt5Gui)
+BuildRequires:	cmake(Qt5Network)
+BuildRequires:	cmake(Qt5Qml)
+BuildRequires:	cmake(Qt5Quick)
+BuildRequires:	cmake(Qt5QuickWidgets)
+BuildRequires:	cmake(Qt5Script)
+BuildRequires:	cmake(Qt5Sql)
+BuildRequires:	cmake(Qt5Test)
+BuildRequires:	cmake(Qt5Widgets)
+BuildRequires:	cmake(Qt5X11Extras)
+BuildRequires:	cmake(Qt5Xml)
+BuildRequires:	cmake(Qt5XmlPatterns)
+BuildRequires:	cmake(KF5Completion)
+BuildRequires:	cmake(KF5ConfigWidgets)
+BuildRequires:	cmake(KF5CoreAddons)
+BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(KF5Declarative)
+BuildRequires:	cmake(KF5DocTools)
+BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(KF5ItemViews)
+BuildRequires:	cmake(KF5KCMUtils)
+BuildRequires:	cmake(KF5TextWidgets)
+BuildRequires:	cmake(KF5WidgetsAddons)
+BuildRequires:	cmake(KF5WindowSystem)
+BuildRequires:	cmake(KF5XmlGui)
 
 %description
 KTouch is a program for learning touch typing. KTouch is a way to learn
@@ -18,10 +45,9 @@ on the keyboard with associated keys to press.
 KTouch helps you learn to touch typing by providing you with something
 to write. KTouch can also help you to remember what fingers to use.
 
-%files
-%doc %{_docdir}/HTML/*/ktouch
-%{_datadir}/applications/kde4/org.kde.ktouch.desktop
-%{_datadir}/apps/ktouch
+%files -f %{name}.lang
+%{_datadir}/applications/org.kde.ktouch.desktop
+%{_datadir}/ktouch
 %{_bindir}/ktouch
 %{_datadir}/metainfo/*.xml
 %{_datadir}/config.kcfg/ktouch.kcfg
@@ -34,9 +60,9 @@ to write. KTouch can also help you to remember what fingers to use.
 %setup -q
 
 %build
-%cmake_kde4 \
-	-DCMAKE_MINIMUM_REQUIRED_VERSION=3.1
-%make
+%cmake_kde5
+%ninja
 
 %install
-%makeinstall_std -C build
+%ninja_install -C build
+%find_lang %{name} --with-html --with-man
