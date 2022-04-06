@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	A program for learning touch typing
 Name:		ktouch
-Version:	21.12.2
+Version:	22.03.80
 Release:	1
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
