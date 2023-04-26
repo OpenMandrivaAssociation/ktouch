@@ -1,8 +1,9 @@
-%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
+%define stable %([ "$(echo %{version} |cut -d. -f3)" -ge 70 ] && echo -n un; echo -n stable)
+
 Summary:	A program for learning touch typing
 Name:		ktouch
 Version:	23.04.0
-Release:	1
+Release:	2
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/ktouch
@@ -38,6 +39,8 @@ BuildRequires:	cmake(KF5TextWidgets)
 BuildRequires:	cmake(KF5WidgetsAddons)
 BuildRequires:	cmake(KF5WindowSystem)
 BuildRequires:	cmake(KF5XmlGui)
+BuildRequires:	cmake(KQtQuickCharts)
+Requires:	kqtquickcharts
 
 %description
 KTouch is a program for learning touch typing. KTouch is a way to learn
@@ -54,12 +57,12 @@ to write. KTouch can also help you to remember what fingers to use.
 %{_datadir}/metainfo/*.xml
 %{_datadir}/config.kcfg/ktouch.kcfg
 %{_iconsdir}/*/*/apps/ktouch.*
-%{_mandir}/man1/ktouch.1.*
+%doc %{_mandir}/man1/ktouch.1.*
 
 #----------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %cmake_kde5
