@@ -2,7 +2,7 @@
 
 Summary:	A program for learning touch typing
 Name:		ktouch
-Version:	23.08.3
+Version:	23.08.4
 Release:	1
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
