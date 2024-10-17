@@ -6,7 +6,7 @@ Version:	24.02.0
 Release:	1
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
-Url:		http://edu.kde.org/ktouch
+Url:		https://edu.kde.org/ktouch
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(xkbfile)
 BuildRequires:	pkgconfig(xcb-xkb)
