@@ -37,6 +37,7 @@ BuildRequires:	cmake(KF6WidgetsAddons)
 BuildRequires:	cmake(KF6WindowSystem)
 BuildRequires:	cmake(KF6XmlGui)
 BuildRequires:	cmake(KQtQuickCharts)
+BuildRequires:	pkgconfig(libxml-2.0)
 Requires:	kqtquickcharts
 
 %description
