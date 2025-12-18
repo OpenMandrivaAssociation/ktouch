@@ -2,7 +2,7 @@
 
 Summary:	A program for learning touch typing
 Name:		ktouch
-Version:	25.08.3
+Version:	25.12.0
 Release:	1
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
@@ -12,6 +12,7 @@ BuildRequires:	pkgconfig(xkbfile)
 BuildRequires:	pkgconfig(xcb-xkb)
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xcb)
+BuildSystem:	cmake
 BuildRequires:	cmake(Qt6Gui)
 BuildRequires:	cmake(Qt6Network)
 BuildRequires:	cmake(Qt6Qml)
@@ -56,16 +57,3 @@ to write. KTouch can also help you to remember what fingers to use.
 %{_datadir}/config.kcfg/ktouch.kcfg
 %{_iconsdir}/*/*/apps/ktouch.*
 %doc %{_mandir}/man1/ktouch.1.*
-
-#----------------------------------------------------------------------
-
-%prep
-%autosetup -p1
-
-%build
-%cmake_kde5
-%ninja
-
-%install
-%ninja_install -C build
-%find_lang %{name} --with-html --with-man
